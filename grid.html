@@ -112,6 +112,85 @@
 
           }
         </p>
+        <div class="container-ex">
+          <div class="caixa-ex">1</div>
+          <div class="caixa-ex">2</div>
+          <div class="caixa-ex">3</div>
+          <div class="caixa-ex">4</div>
+          <div class="caixa-ex">5</div>
+          <div class="caixa-ex">6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Principais Unidades e Funções do Grid</h2>
+        <ul>
+          <li>
+            <code>fr</code> — Unidade fracionária. Representa uma parte do
+            espaço livre disponível no container (ex.:
+            <code>1fr 2fr</code> divide o espaço em 3 partes, e a segunda coluna
+            fica com 2).
+          </li>
+          <li>
+            <code>repeat()</code> — Repete um valor ou padrão de tamanhos várias
+            vezes, evitando escrever tudo à mão (ex.:
+            <code>repeat(3, 1fr)</code> equivale a <code>1fr 1fr 1fr</code>).
+          </li>
+          <li>
+            <code>minmax()</code> — Define um tamanho mínimo e um máximo para a
+            coluna ou linha (ex.: <code>minmax(100px, 1fr)</code>).
+          </li>
+          <li>
+            <code>auto</code> — O tamanho se ajusta ao conteúdo do item, ou
+            ocupa o espaço restante quando não há outra regra.
+          </li>
+          <li>
+            <code>auto-fit</code> — Usado dentro do <code>repeat()</code>. Cria
+            quantas colunas couberem e estica as colunas para ocupar todo o
+            espaço livre (ex.:
+            <code>repeat(auto-fit, minmax(150px, 1fr))</code>).
+          </li>
+          <li>
+            <code>auto-fill</code> — Parecido com o <code>auto-fit</code>, mas
+            mantém as colunas vazias reservadas em vez de esticar as existentes.
+          </li>
+          <li>
+            <code>min-content</code> / <code>max-content</code> — Ajustam a
+            coluna ao menor ou ao maior tamanho possível do conteúdo,
+            respectivamente.
+          </li>
+          <li>
+            <code>span</code> — Usado em <code>grid-column</code> e
+            <code>grid-row</code> para fazer o item ocupar várias células (ex.:
+            <code>grid-column: span 2</code>).
+          </li>
+          <li>
+            <code>-1</code> (índice negativo) — Conta as linhas da grade a
+            partir do final. Permite fazer um item ir até a última linha (ex.:
+            <code>grid-column: 1 / -1</code> ocupa a largura toda).
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Exemplo ativo de: grid-template-columns</h2>
+
+        <input type="radio" name="colunas" id="col-1" checked />
+        <label for="col-1" class="botao">1fr</label>
+
+        <input type="radio" name="colunas" id="col-2" />
+        <label for="col-2" class="botao">1fr 1fr</label>
+
+        <input type="radio" name="colunas" id="col-3" />
+        <label for="col-3" class="botao">repeat(3, 1fr)</label>
+
+        <input type="radio" name="colunas" id="col-prop" />
+        <label for="col-prop" class="botao">1fr 2fr 1fr</label>
+
+        <input type="radio" name="colunas" id="col-fixa" />
+        <label for="col-fixa" class="botao">100px 1fr</label>
+
+        <input type="radio" name="colunas" id="col-auto" />
+        <label for="col-auto" class="botao">auto-fit, minmax(100px, 1fr)</label>
+
         <div class="container">
           <div class="caixa">1</div>
           <div class="caixa">2</div>

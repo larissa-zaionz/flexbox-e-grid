@@ -1,4 +1,4 @@
-.container {
+.container-ex {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
@@ -6,7 +6,7 @@
   padding: 10px;
 }
 
-.caixa {
+.caixa-ex {
   background: #3498db;
   color: white;
   padding: 30px;
@@ -23,4 +23,70 @@ ul {
 }
 .coment {
   color: #999;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.botao {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 0 4px 8px 0;
+  background: #2c3e50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+input:checked + .botao {
+  background: #e67e22;
+  font-weight: bold;
+}
+
+input:checked + .botao::before {
+  content: "✓ ";
+}
+
+input:focus-visible + .botao {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border: 3px solid #01ddfa;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.caixa {
+  background: #3498db;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#col-1:checked ~ .container {
+  grid-template-columns: 1fr;
+}
+#col-2:checked ~ .container {
+  grid-template-columns: 1fr 1fr;
+}
+#col-3:checked ~ .container {
+  grid-template-columns: repeat(3, 1fr);
+}
+#col-prop:checked ~ .container {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+#col-fixa:checked ~ .container {
+  grid-template-columns: 100px 1fr;
+}
+#col-auto:checked ~ .container {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
