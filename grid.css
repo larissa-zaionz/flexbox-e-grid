@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  border: 3px solid #03daf7;
+  padding: 10px;
+}
+
+.caixa {
+  background: #3498db;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.cor {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+ul {
+  line-height: 1.8;
+}
+.coment {
+  color: #999;
+}

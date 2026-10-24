@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução ao Grid</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="grid.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Introdução ao CSS Grid</h1>
+      <a href="index.html">⬅ Voltar ao Hub</a>
+    </header>
+    <main>
+      <section>
+        <h2>O que é CSS Grid?</h2>
+        <p>
+          O <code>Grid</code>divide um container em uma grade de linhas e
+          colunas, e você posiciona os itens dentro dessas células. Enquanto o
+          <code>Flexbox</code> trabalha em um eixo (linha ou coluna), o
+          <code>Grid</code> trabalha nos dois ao mesmo tempo.
+        </p>
+      </section>
+      <section>
+        <h2>Ativando Css Grid</h2>
+        <p class="cor">
+          .container {<br />
+          display: grid;
+          <br />
+          }
+        </p>
+      </section>
+      <section>
+        <h2>Principais Propriedades do Container (Pai) no Grid</h2>
+        <ul>
+          <li>
+            <code>grid-template-columns</code> — Define a quantidade e o tamanho
+            das colunas (ex.: <code>repeat(3, 1fr)</code>).
+          </li>
+          <li>
+            <code>grid-template-rows</code> — Define a quantidade e a altura das
+            linhas (ex.: <code>100px 150px</code>).
+          </li>
+          <li>
+            <code>grid-template-areas</code> — Permite montar o layout dando
+            nomes às áreas (ex.: <code>"topo topo" "menu conteudo"</code>).
+          </li>
+          <li>
+            <code>grid-auto-rows</code> — Define a altura das linhas criadas
+            automaticamente quando há mais itens do que células.
+          </li>
+          <li>
+            <code>justify-items</code> / <code>align-items</code> — Alinham os
+            itens dentro de suas células, na horizontal e na vertical.
+          </li>
+          <li>
+            <code>place-items</code> — Atalho que combina
+            <code>align-items</code> e <code>justify-items</code> (ex.:
+            <code>place-items: center</code>).
+          </li>
+          <li>
+            <code>justify-content</code> / <code>align-content</code> — Alinham
+            a grade inteira dentro do container, quando ela é menor que ele.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Principais Propriedades dos Itens (Filhos) no Grid</h2>
+        <ul>
+          <li>
+            <code>grid-column</code> — Define em qual coluna o item começa e
+            termina, ou quantas ocupa (ex.: <code>span 2</code> ou
+            <code>1 / -1</code>).
+          </li>
+          <li>
+            <code>grid-row</code> — Define em qual linha o item começa e
+            termina, ou quantas ocupa (ex.: <code>span 2</code>).
+          </li>
+          <li>
+            <code>grid-area</code> — Liga o item a uma área nomeada em
+            <code>grid-template-areas</code>.
+          </li>
+          <li>
+            <code>justify-self</code> / <code>align-self</code> — Sobrescrevem o
+            alinhamento de um item específico dentro da própria célula.
+          </li>
+          <li>
+            <code>place-self</code> — Atalho que combina
+            <code>align-self</code> e <code>justify-self</code>.
+          </li>
+          <li>
+            <code>order</code> — Altera a ordem visual de exibição do item em
+            relação aos outros no código.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Exemplo de CSS grid</h2>
+        <p class="cor">
+          .container {<br />
+          display: grid; <br />
+          grid-template-columns: 100px 100px 100px;
+          <span class="coment"> /* 3 colunas de 100px cada */</span> <br />
+          grid-template-rows: 80px 80px;
+          <span class="coment"> /* 2 linhas de 80px cada*/ </span><br />
+          gap: 15px
+          <span class="coment">
+            /* define um espaço de 15px de distância de cada caixa/ </span
+          ><br />
+
+          }
+        </p>
+        <div class="container">
+          <div class="caixa">1</div>
+          <div class="caixa">2</div>
+          <div class="caixa">3</div>
+          <div class="caixa">4</div>
+          <div class="caixa">5</div>
+          <div class="caixa">6</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Desenvolvido por Aluno(a): Larissa Zaionz Slominski — © 2025</p>
+    </footer>
+  </body>
+</html>
