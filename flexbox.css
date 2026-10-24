@@ -25,19 +25,19 @@ input:checked + .botao::before {
 
 /* foco pelo teclado */
 input:focus-visible + .botao {
-  outline: 3px solid #3498db;
+  outline: 3px solid #000000;
   outline-offset: 2px;
 }
 
 .container {
   display: flex;
-  border: 3px solid #333;
+  border: 3px solid #01d0f5;
   padding: 10px;
   margin-top: 20px;
 }
 
 .caixa {
-  background: #3498db;
+  background: #0f5786;
   color: white;
   width: 60px;
   height: 60px;
@@ -45,6 +45,7 @@ input:focus-visible + .botao {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  border: 2px solid rgb(10, 210, 224);
 }
 
 #flex-start:checked ~ .container {
@@ -67,4 +68,9 @@ input:focus-visible + .botao {
 }
 ul {
   line-height: 1.8;
+}
+.cor {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
 }
