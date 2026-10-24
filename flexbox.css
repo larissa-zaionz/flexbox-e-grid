@@ -1,0 +1,70 @@
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.botao {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 0 4px 8px 0;
+  background: #2c3e50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+input:checked + .botao {
+  background: #e67e22;
+  font-weight: bold;
+}
+
+input:checked + .botao::before {
+  content: "✓ ";
+}
+
+/* foco pelo teclado */
+input:focus-visible + .botao {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
+.container {
+  display: flex;
+  border: 3px solid #333;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.caixa {
+  background: #3498db;
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+#flex-start:checked ~ .container {
+  justify-content: flex-start;
+}
+#center:checked ~ .container {
+  justify-content: center;
+}
+#flex-end:checked ~ .container {
+  justify-content: flex-end;
+}
+#space-between:checked ~ .container {
+  justify-content: space-between;
+}
+#space-around:checked ~ .container {
+  justify-content: space-around;
+}
+#space-evenly:checked ~ .container {
+  justify-content: space-evenly;
+}
+ul {
+  line-height: 1.8;
+}

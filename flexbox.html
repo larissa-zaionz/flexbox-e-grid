@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução ao Flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="flexbox.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Introdução ao Flexbox</h1>
+      <a href="index.html">⬅ Voltar ao Hub</a>
+    </header>
+    <main>
+      <section>
+        <h2>O que é o Flexbox?</h2>
+        <p>
+          <code>Flexbox (Flexible Box Layout)</code> é um modelo de layout do
+          CSS para distribuir e alinhar itens dentro de um container em uma
+          dimensão (linha ou coluna), lidando bem com espaço sobrando ou
+          faltando.
+        </p>
+      </section>
+      <section>
+        <h2>Conceitos Básicos</h2>
+        <ul>
+          <li>
+            <strong> Contêiner Flex (Flex Container): </strong>É o elemento pai
+            que recebe a propriedade <code>display: flex </code>(ou
+            codeinline-flex), ativando o contexto flexível para todos os seus
+            filhos diretos.
+          </li>
+          <li>
+            <strong>Itens Flex (Flex Items):</strong> São os elementos-filhos
+            diretos que estão dentro do contêiner flex.
+          </li>
+          <li>
+            <strong>Eixo Principal (Main Axis):</strong> É a direção principal
+            na qual os itens são dispostos, definida por
+            <code>flex-direction</code> (<code>row</code>,
+            <code>row-reverse</code>, <code>column</code>,
+            <code>column-reverse</code>).
+          </li>
+          <li>
+            <strong>Eixo Transversal (Cross Axis):</strong> É a direção
+            perpendicular ao eixo principal.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Principais Propriedades do Contêiner (Pai)</h2>
+        <ul>
+          <li>
+            <code>display: flex</code> — Transforma o elemento em um contêiner
+            flex.
+          </li>
+          <li>
+            <code>flex-direction</code> — Define a orientação dos itens (linha
+            horizontal ou coluna vertical).
+          </li>
+          <li>
+            <code>flex-wrap</code> — Controla se os itens devem quebrar de linha
+            quando não couberem em uma única linha (<code>nowrap</code>,
+            <code>wrap</code>, <code>wrap-reverse</code>).
+          </li>
+          <li>
+            <code>justify-content</code> — Alinha os itens ao longo do eixo
+            principal (ex.: <code>flex-start</code>, <code>flex-end</code>,
+            <code>center</code>, <code>space-between</code>,
+            <code>space-around</code>).
+          </li>
+          <li>
+            <code>align-items</code> — Alinha os itens ao longo do eixo
+            transversal (ex.: <code>stretch</code>, <code>flex-start</code>,
+            <code>flex-end</code>, <code>center</code>, <code>baseline</code> ).
+          </li>
+          <li>
+            <code>gap</code> — Define o espaçamento exato entre os itens do
+            flexbox.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Principais Propriedades dos Itens (Filhos)</h2>
+        <ul>
+          <li>
+            <code>flex-grow</code> — Define a capacidade do item de crescer para
+            ocupar o espaço livre disponível (padrão é <code>0</code>).
+          </li>
+          <li>
+            <code>flex-shrink</code> — Define a capacidade do item de encolher
+            se necessário (padrão é <code>1</code>).
+          </li>
+          <li>
+            <code>flex-basis</code> — Define o tamanho inicial do item antes que
+            o espaço seja distribuído (padrão é <code>auto</code>).
+          </li>
+          <li>
+            <code>flex</code> — Forma abreviada (shorthand) que combina
+            <code>flex-grow</code>, <code>flex-shrink</code> e
+            <code>flex-basis</code> (ex.: <code>flex: 1 1 auto</code>).
+          </li>
+          <li>
+            <code>align-self</code> — Permite sobrescrever o alinhamento de um
+            item específico no eixo transversal.
+          </li>
+          <li>
+            <code>order</code> — Altera a ordem visual de exibição do item em
+            relação aos outros no código.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Exemplo pratico de: justify-content</h2>
+
+        <input type="radio" name="alinhar" id="flex-start" checked />
+        <label for="flex-start" class="botao">flex-start</label>
+
+        <input type="radio" name="alinhar" id="center" />
+        <label for="center" class="botao">center</label>
+
+        <input type="radio" name="alinhar" id="flex-end" />
+        <label for="flex-end" class="botao">flex-end</label>
+
+        <input type="radio" name="alinhar" id="space-between" />
+        <label for="space-between" class="botao">space-between</label>
+
+        <input type="radio" name="alinhar" id="space-around" />
+        <label for="space-around" class="botao">space-around</label>
+
+        <input type="radio" name="alinhar" id="space-evenly" />
+        <label for="space-evenly" class="botao">space-evenly</label>
+
+        <div class="container">
+          <div class="caixa">1</div>
+          <div class="caixa">2</div>
+          <div class="caixa">3</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Desenvolvido por Aluno(a): Larissa Zaionz Slominski — © 2025</p>
+    </footer>
+  </body>
+</html>
