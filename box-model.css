@@ -61,7 +61,7 @@
 
 /* ====== Área de Testes ====== */
 .teste-css {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   margin-top: 40px;
   padding: 25px;
   border-radius: 12px;
@@ -72,7 +72,8 @@
   margin-bottom: 10px;
 }
 
-.caixa {
+
+.caixa-teste {
   width: 120px;
   height: 120px;
   display: flex;
@@ -83,7 +84,6 @@
   border-radius: 8px;
 }
 
-/* ====== Classes para alteração ====== */
 .teste-container {
   display: flex;
   flex-wrap: wrap;
@@ -102,4 +102,12 @@
 
 .caixa3 {
   background: lightgreen;
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+  }
 }

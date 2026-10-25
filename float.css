@@ -1,50 +1,49 @@
 /* ====== Demonstrações ====== */
 .float-demo {
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    padding: 20px;
-    overflow: auto; /* importante para conter os floats */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  overflow: auto; /* importante para conter os floats */
 }
 
 .float-box {
-    width: 150px;
-    height: 100px;
-    color: #000;
-    text-align: center;
-    line-height: 100px;
-    font-weight: bold;
-    border-radius: 8px;
+  width: 150px;
+  height: 100px;
+  color: #000;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  border-radius: 8px;
 }
 
 .left {
-    background: #00d8ff;
-    float: ;
-    margin-right: 15px;
+  background: #00d8ff;
+  float: left;
+  margin-right: 15px;
 }
 
 .right {
-    background: #ff7b00;
-    float: ;
-    margin-left: 15px;
+  background: #ff7b00;
+  float: right;
+  margin-left: 15px;
 }
 
 .clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .image-float {
-    width: 200px;
-    float: ;
-    margin-right: 20px;
-    border-radius: 8px;
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 8px;
 }
-
 
 /* ====== Área de Testes ====== */
 .teste-css {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   margin-top: 40px;
   padding: 25px;
   border-radius: 12px;
@@ -55,7 +54,7 @@
   margin-bottom: 10px;
 }
 
-.caixa {
+.caixa-teste {
   width: 120px;
   height: 120px;
   display: flex;
@@ -66,7 +65,6 @@
   border-radius: 8px;
 }
 
-/* ====== Classes para alteração ====== */
 .teste-container {
   display: flex;
   flex-wrap: wrap;
@@ -87,17 +85,10 @@
   background: lightgreen;
 }
 
-
 @media (max-width: 600px) {
-    .float-box {
-    width: 100%;
-    float: none;
-    margin: 10px 0;
-    }
-    .image-float {
-    float: none;
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 100%;
-    }
+  .box {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+  }
 }
